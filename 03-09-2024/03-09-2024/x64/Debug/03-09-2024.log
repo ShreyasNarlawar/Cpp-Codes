@@ -1,0 +1,12 @@
+﻿  code09.cpp
+C:\Users\IET\Desktop\Harsh_Shreyas C++\03-09-2024\03-09-2024\code09.cpp(17,2): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\IET\Desktop\Harsh_Shreyas C++\03-09-2024\03-09-2024\code09.cpp(25,20): error C2665: 'Demo::Demo': no overloaded function could convert all the argument types
+      C:\Users\IET\Desktop\Harsh_Shreyas C++\03-09-2024\03-09-2024\code09.cpp(15,7):
+      could be 'Demo::Demo(int,char *)'
+          C:\Users\IET\Desktop\Harsh_Shreyas C++\03-09-2024\03-09-2024\code09.cpp(25,20):
+          'Demo::Demo(int,char *)': cannot convert argument 2 from 'const char [8]' to 'char *'
+              C:\Users\IET\Desktop\Harsh_Shreyas C++\03-09-2024\03-09-2024\code09.cpp(25,25):
+              Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+      C:\Users\IET\Desktop\Harsh_Shreyas C++\03-09-2024\03-09-2024\code09.cpp(25,20):
+      while trying to match the argument list '(int, const char [8])'
+  
