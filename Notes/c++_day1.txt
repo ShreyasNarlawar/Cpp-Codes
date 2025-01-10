@@ -1,11 +1,10 @@
-					Introduction to C++
+Introduction to C++
 
 ==>C++ was invented by Bjarne Stroustrup in 1979 at Bell lab.
 initially he called this lang as, c with classes,later in 1983 the name was changed to c++.
 
 ==>C++ is a general purpose/multipurpose,high level,compiler based and object oriented programming language.
-==>This programming language requires a compiler or interpreter to translate the program into machine language
- (execute the program).
+==>This programming language requires a compiler or interpreter to translate the program into machine language (execute the program).
 Example:  Java,  C#, C,C++, etc.
 In c++ we are using compiler as a translator,thats why c++ is called as compiler based programming lang.
 
@@ -26,8 +25,7 @@ In supermarket,bill should be generated,billing program is designed using c++.Ba
 
 Function oriented programming lang / Procedural Language:
 
-==>Total program is divided into small programs called as functions. Function is a small program which is used to do a particular job.Entire C program is collection 
-of functions thats why c++ is called as function oriented programming lang.
+==>Total program is divided into small programs called as functions. Function is a small program which is ued to do a particular job.Entire C program is collection of functions thats why c++ is called as function oriented programming lang.
 
 Advantages are:
 Memory requirement is less
@@ -35,29 +33,26 @@ modularity
 reusability(write once use many times)
 
 =============================================================================
-PROBLEM WITH FUNCTION in c
+PROBLEM WITH FUNCTION
 
 ==>procedural lang means globally all data stored at one place i.e  all data accessible to all function.
 ==>when program is big and when data is global then to identify  which variable is accesed by which function  is 
 very difficult. Any function can access it . so data is not secured because data is freely moving around the function.
 
 ==>In c programming lang, data and function is seperately stored and global data is accessible to every function.
-==>it is difficult to map real world entities into system design.it is difficult to bind data to the functionality of the system because its functionality is 
-considered seperately
-==>debugging a structured program is difficult and time consuming process.since data is shared over the entire program,different functions may be accessing it.
-to exactly find which function is causing the error is not easy.
+==>it is difficult to map real world entities into system design.it is difficult to bind data to the functionality of the system because its functionality is considered seperately
+==>debugging a structured program is difficult and time consuming process.since data is shared over the entire program,different functions may be accessing it.to exactly find which function is causing the error is not easy.
 ====================================================================================
 Object oriented programming features
 
 ==>class is an extension of C structure
-==>structure is collection of  heterogenous datatype. structure allows us to store different types of variables at one place under one name.due to structure ,it is 
-very easy to construct object oriented programming.
+==>structure is collection of  heterogenous datatype. structure allows us to store different types of variables at one place under one name.due to structure ,it is very easy to construct object oriented programming.
 In oop will going to use class but that class derived/extension of c structure.
 
 ==>we can able to declared both primitive and derived datatype at one place using structure.
 ex:
 I want to store student related data at one place ..
-struct stu
+ struct stu
 {
 int id;primitaive
 int marks[6];//derived;
@@ -149,25 +144,24 @@ class stu
 {
 };
 stu s;//object  (memory allocation takes place)
-==> object s is created from this class stu, that why  class is called as blueprint(original copy) to construct the object(xerox copy). 
-thats why to create object we need class,thats  why class is a blueprint and object is the instance of the class.
+==> object s is created from this class stu, that why  class is called as blueprint(original copy) to construct the object(xerox copy). thats why to create object we need class,thats  why class is a blueprint and object is the instance of the class.
 
 ==>object is the physical representation of a class.when object is created then only memory allocation takes place. class never allocates memory i.e logical representation.
 ==================================================
 Difference between C structure and C ++ structure
 
-1)collection of variables                    		collection of variables and function
-2)structure members are public       		        structure members can be private,protected,public									                                                                  
+1)collection of variables                    		 collection of variables and function
+2)structure members are public       		structure members can be private,protected,public									                                                                  
 ----------------------------------------------------------------------------------------------------------------------------------------
 similarities between  C++ structure and class
-1)userdefined                          			userdefined
-2)collection of variables & functions   		collection of variables & functions
-3)members are private,protected,public		        members are private,protected,public																											
+1)userdefined                          					  userdefined
+2)collection of variables & functions   		collection of 	variables & functions
+3)members are private,protected,public		members are private,protected,public																											
 -------------------------------------------------------------------------------------------------------------------------------------------		
 Differences between  C++ structure and class
-1) by default members are public 			by default members are private
+1)by default members are public 			by default members	are private
 2) structure cannot be inherited			class can be inherited
-3) used to build simple program			        uses to build complex program,big project
+3)used to build simple program			uses to build complex program,big project
 
 ============================================================================
 class:
@@ -194,9 +188,7 @@ Note:
 using namespace std;
 class A
 {
-        public:
 	int a;
-        public:
 	void get()
 	{
 		a=100;
@@ -207,7 +199,7 @@ int main()
 {
 	A obj;
 	//obj.a=100;//not allowed whenever datamembers and member functions are private cannot be accessed directly using 	objects.
-	//obj.get();//allowed whenever datamembers and member functions are private cannot be accessed directly using 	objects.
+	//obj.get();//not allowed whenever datamembers and member functions are private cannot be accessed directly using 	objects.
  } 
 ======================================================================
 #include<iostream>
@@ -336,7 +328,7 @@ C ++ structures have access modifiers.
 C does not support reference variables.
 C++ supports reference variables.
 ========================================================================
-*******************************************************Types of Variables
+Types of Variables
 There are three types of variables based on the scope of variables in C++
 Local Variables
 Instance Variables
@@ -758,7 +750,7 @@ Sequence after creation of object
 ==>The constructor in C++ has the same name as the class or structure. It constructs the values i.e. provides data for the object which is why it is known as constructor.
 ==>Constructor do not return value, hence they do not have a return type not even void.
 ==>Constructor cannot be constant member function.
-
+ 
 The prototype of the constructor looks like 
      <class-name> (list-of-parameters);
 

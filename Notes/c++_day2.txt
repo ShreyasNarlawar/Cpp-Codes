@@ -1,4 +1,3 @@
-
 Array in C++
 
 In C++, an array is a data structure that is used to store multiple values of similar data types in a contiguous memory location.
@@ -103,7 +102,7 @@ int main()
 { 
   
     // Define an array 
-    int arr[] = { 11, 22, 33, 44 };  
+    int arr[] = { 11, 22, 33, 44 }; 
   
     // Print elements of an array 
     cout << "first element: " << *arr << endl; //*(arr+0)
@@ -236,14 +235,12 @@ Assignment
 3)square of all elements of 2d array
 =============================================================
 Default Arguments
-														`
-==>A default argument is a value provided in a function declaration that is automatically assigned by the compiler
- if the calling function doesn’t provide a value for the argument.. 
+
+==>A default argument is a value provided in a function declaration that is automatically assigned by the compiler if the calling function doesn’t provide a value for the argument.. 
 
 Following are the rules of declaring default arguments -
-														
-==>The values passed in the default arguments are not constant. These values can be overwritten if the value is 
-passed to the function. If not, the previously declared value retains.
+
+==>The values passed in the default arguments are not constant. These values can be overwritten if the value is passed to the function. If not, the previously declared value retains.
 ==>All the values that will be given as a default value will be on the right.
 
 #include <iostream>  
@@ -328,9 +325,8 @@ int main()
 
 Keypoints:Default arguments are different from constant arguments as constant arguments can’t be changed whereas default arguments can be overwritten if required.
 ==============================================
-If we are defining the default arguments in the function definition instead of the function declaration, then the function
- must be defined before the function call.
-															
+If we are defining the default arguments in the function definition instead of the function declaration, then the function must be defined before the function call.
+
 #include <iostream>
 using namespace std;
 
@@ -351,7 +347,7 @@ points to remember
 
 1)Once we provide a default value for a parameter, all subsequent parameters must also have default values. For example,
 // Invalid
-void add(int a, int b = 3, int c, int d); // intialization from right side to left
+void add(int a, int b = 3, int c, int d);
 
 // Invalid
 void add(int a, int b = 3, int c, int d = 4);
@@ -428,12 +424,11 @@ int main()
   
 ================================================================================================================
 Passing and Returning Objects in C++
-In C++ we can pass class’s objects as arguments and also return them from a function the same way
- we pass and return other variables.
-												
+In C++ we can pass class’s objects as arguments and also return them from a function the same way we pass and return other variables.
+
 Passing an Object as argument
 To pass an object as an argument we write the object name as the argument while calling the function the same way we do it for other variables.
-																
+
 Syntax:  
 function_name(object_name);
 
@@ -486,9 +481,8 @@ Answer: (B)
 Array of Objects
 
 ==>In C++, an array of objects is a collection of objects of the same class type that are stored in contiguous memory locations. 
-==>Since each item in the array is an instance of the class, each one's member variables can have 
-unique value. This makes it possible to manage and handles numerous objects by storing them in a single data structure and giving them similar properties and behaviours.
-																
+==>Since each item in the array is an instance of the class, each one's member variables can have unique value. This makes it possible to manage and handles numerous objects by storing them in a single data structure and giving them similar properties and behaviours.
+
 syntax:
 classname objectname[arraysize];
 
@@ -597,16 +591,14 @@ Constant Objects
 
 ==>To create constant object use const keyword.
 
-==>When we create an object using the const keyword, the value of data members can never change till
- the life of the object in a program. The const objects are also known as the read-only objects.
+==>When we create an object using the const keyword, the value of data members can never change till the life of the object in a program. The const objects are also known as the read-only objects.
 
-==>constant objects invokes only constant member function. But a non constant object can invoke both 
-i.e constant  as well as non constant function.
+==>constant objects invokes only constant member function. But a non constant object can invoke both i.e constant  as well as non constant function.
 
 ==>The data members of a constant object cannot accessed through any non const member function.
 
 Syntax
-const class_name obj_name; // const class_name obj_name; 
+const class_name obj_name;  
 ex: const Complex c1(1,2);
 
 
@@ -617,7 +609,7 @@ using namespace std;
 class ABC  
 {  
 public:  
-int A; // data members are const at all prog     
+int A;    
 	ABC ()  
 	{  
 		A = 10; 
@@ -625,8 +617,8 @@ int A; // data members are const at all prog
 };  
 int main ()  
 {  
-	const ABC obj; // const classname objname 
-	cout << " The value of A: " << obj.A << endl; // 10 
+	const ABC obj;  
+	cout << " The value of A: " << obj.A << endl;  
 // obj.A = 20; // It returns a compile time error  
 return 0;  
 }  
@@ -639,32 +631,25 @@ In the above program, we assign the value of A is 10, the compiler prints "The v
  Constant Member function 
 
 ==>To make a member function constant,use const keyword. 
-==>We can create a constant member function of a class by adding the const keyword after the name 
-of the member function.
+==>We can create a constant member function of a class by adding the const keyword after the name of the member function.
 Syntax
 
 return_type mem_fun() const  
 {  
- // data mem are constant through program
 }   
-
-return_type memfun() const{
-}
-In the above syntax, mem_fun() is a member function of a class, and the const keyword is used a
-fter the name of the member function to make it constant.
+In the above syntax, mem_fun() is a member function of a class, and the const keyword is used after the name of the member function to make it constant.
 
 ==>Those functions that do not alter the values of the data members, or the functions that are 'read only' can be 
 made constant.
 
-==>If a function is declared as const and the implementation of that function tries to change the 
-object by changing the value of any of its members,the compiler flags an error.
+==>If a function is declared as const and the implementation of that function tries to change the object by changing the value of any of its members,the compiler flags an error.
 
 Example: Program to use the const keyword with the member function of class
 class ABC  
 {  
  
 public:  
-int A; // its value is const  
+int A;  
 
 void fun () const  
 {  
@@ -674,8 +659,8 @@ void fun () const
   
 int main ()  
 {  
-    ABC obj; // object creation classname objname;  
-    obj.fun();  // call const member fun of class abc using  . 
+    ABC obj;  
+    obj.fun();  
     return 0;  
 }  
 Output
@@ -722,9 +707,7 @@ using namespace std;
 class Test {
     int value;
  public:
-    Test(int v = 0) 
-{ value = v; 
-}
+    Test(int v = 0) { value = v; }
      int getValue() const { return value; }
 };
  
@@ -791,7 +774,44 @@ In the above program, the num is a constant argument, and we cannot update the n
 
 
 
+FAQ on constant object:
+Q1. Can const objects of a class call non-const member functions?
+Answer:
+No,an object declared as const cannot be modified and hence, can invoke only const member functions as these functions ensure not to modify the object.
 
+Q2. Can non-const objects of a class call const member function?
+Answer: yes
+When a function is declared as const, it can be called on any type of object.
+
+
+Note: A constant member function can be overloaded with a function of same name.
+ex:
+void func() const;
+void func();
+
+class temp
+{
+public:
+	void show();
+	void show() const;
+};
+void temp::show()
+{
+	cout<<"in non constant show";
+}
+void temp::show()const
+{
+	cout<<"in  constant show";
+}
+int main()
+{
+	 temp t;
+	t.show();
+}
+
+In this case, constness of the object will determine which functions should  be invoked.
+
+Note:Constructors and Destructors cannot be made constants.
 ===================================================================================
 
 Dynamic memory allocation
@@ -845,20 +865,15 @@ int main()
 {
         int* ptr;
         int n,i;
-
         printf("enter no of elements\n");
         scanf("%d",&n);
-
         ptr=(int*) malloc(n*sizeof(int));
         printf("accept elements\n");
-
         for(i=0;i<n;i++)
         scanf("%d",&ptr[i]);//(ptr+i),(i+ptr)
         printf("display elements\n");
-
         for(i=0;i<n;i++)
         printf("%d\t",ptr[i]);//*(ptr+i)
-
         free(ptr);//to deallocate the memory on heap section which is allocated by malloc/calloc()
 }
 

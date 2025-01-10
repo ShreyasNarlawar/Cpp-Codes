@@ -1,15 +1,39 @@
 
-                                                            Dynamic initialization of object in C++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dynamic initialization of object in C++
 
 ==>Dynamic initialization of object refers to initializing the objects at a run time i.e., the initial value of an object is provided during 
 run time.
-
 ==>It can be achieved by using constructors and by passing parameters to the constructors.
-
 ==>This comes in really handy when there are multiple constructors of the same class with different inputs.
-
 ==>Dynamic initialization of the object using a constructor is beneficial when the data is of different formats.
-
 
 Dynamic Constructor:
 
@@ -25,7 +49,7 @@ using namespace std;
  public:
       Demo()
     {
-         // Dynamically initializing ptr using new
+        // Dynamically initializing ptr using new
         ptr = new int;
         *ptr = 10;
     }
@@ -88,7 +112,7 @@ string1::string1()//it will allocate 1byte memory on heap section
 }
 void string1::chardisplay()
 {
-	         cout<<"length is "<<len<<endl;
+	cout<<"length is "<<len<<endl;
 	cout<<"character is "<<*ptr<<endl;
 }
 
@@ -130,7 +154,7 @@ string1::string1(char ch,int l)//ch='*' , l=60
 
 
 
- string1::string1(int l)
+string1::string1(int l)
 {
 	int i;
 	len=l;
@@ -141,9 +165,6 @@ string1::string1(char ch,int l)//ch='*' , l=60
 int main()
 {
 	string1 c1;
-
-
-
 	c1.chardisplay();
 
 	string1 c2("rahul");
@@ -272,12 +293,7 @@ int main()
 ==>But if the class has a pointer variable to which memory is allocated dynamically, then the class must implement its own copy constructor. In this case, if user doesnot defined its own copy constructor,then the compiler's copy is invoked.This creates an object as a copy of another object.This shallow copy may leads to the problem of dangling pointer.
 
 What is Dangling Pointer and how this situation arises?
-==>This problem particularly arises when there are two objects holding the address of a 
-common memory location on the heap. If one of those object goes out of scope, the destructor is invoked, 
-thus deleting the memory that it is pointing to. Now the other object, which is still in scope, 
-but which was also pointing to the same memory location, contains the address of the memory ,
- which has been freed by the destructor. The pointer holding an address to the memory that has been set free is 
-referred to as the dangling pointer.
+==>This problem particularly arises when there are two objects holding the address of a common memory location on the heap. If one of those object goes out of scope, the destructor is invoked, thus deleting the memory that it is pointing to. Now the other object, which is still in scope, but which was also pointing to the same memory location, contains the address of the memory , which has been freed by the destructor. The pointer holding an address to the memory that has been set free is referred to as the dangling pointer.
 
 ex:
  cstring s1("hello");
@@ -311,7 +327,7 @@ cstring s2(s1);
 Types of Copy Constructors
 
 1. Default Copy Constructor:
-==>Compiler provides a default copy constructor which does member wise copying i.e shallow copying.
+==>Compiler provides a default copy constructor which does memberwise copying i.e shallow copying.
 ==>
 
 // Implicit copy constructor Calling
@@ -322,14 +338,8 @@ class Sample {
     int id;
  
 public:
-    void init(int x) 
-{ 
-     id = x; 
-}
-    void display()
- { 
-     cout << endl << "ID=" << id; 
-}
+    void init(int x) { id = x; }
+    void display() { cout << endl << "ID=" << id; }
 };
 int main()
 {

@@ -11,7 +11,6 @@ without changing the properties of base class and may add new features to its ow
 The derived class is the specialized class for the base class.
 
 ==>It not only helps to reuse the old code but adds in extendings the functionality. i.e Reusability + Extensibility
-
 Reusability:
 Once a class is written and tested,it can be further used for creating new classes.These derived classes not only inherit the features of their base class,
 but also have their own individualist features. 
@@ -106,7 +105,8 @@ class Circle
         {   // member function can access private 
             // data member radius
             return 3.14*radius*radius;
-        }     
+        }
+     
 };
  
 // main function
@@ -197,6 +197,32 @@ public:
 }
 ====================================================================
 
+// C++ program to demonstrate implementation of Inheritance
+ #include <iostream>
+using namespace std;
+class Parent {
+public:
+    int id_p;
+};
+class Child : public Parent {
+public:
+    int id_c;
+    void display()
+    {
+    	cout<<id_p;//allowed
+	}
+};
+ int main()
+{
+    Child obj1;
+     // An object of class child has all data members and member functions of class parent
+    obj1.id_c = 7;//allowed
+    obj1.id_p = 91;//allowed
+    cout << "Child id is: " << obj1.id_c << '\n';
+    cout << "Parent id is: " << obj1.id_p << '\n';
+    cout<<sizeof(obj1);
+}
+
 =================================================
 
 // C++ program to demonstrate implementation of Inheritance
@@ -228,8 +254,7 @@ public:
 
 ===========================================================================
 Note 2:
-When base class obj is created memory is allocated for base class datamembers only.
- Through base class obj, we can access base class members only ,we cannot access derived class members.
+When base class obj is created memory is allocated for base class datamembers only. Through base class obj, we can access base class members only ,we cannot access derived class members.
 
 #include <iostream>
 using namespace std;
@@ -255,8 +280,7 @@ public:
 ==============================================================================================
 Modes of Inheritance: There are 3 modes of inheritance.
 
-Modes of inheritance specifies the way in which a class is derived. 
-It tells abouth the access rights given to the derived class to access  its base class attributes and functions. 
+Modes of inheritance specifies the way in which a class is derived. It tells abouth the access rights given to the derived class to access  its base class attributes and functions. 
 These mode are:
 private(default)
 public
@@ -282,8 +306,7 @@ Example:
 {            }
 
 
-Public Mode: If we derive a subclass from a public base class. 
-Then the public member of the base class will become public in the derived class and protected members of the base class will become protected in the derived class.
+Public Mode: If we derive a subclass from a public base class. Then the public member of the base class will become public in the derived class and protected members of the base class will become protected in the derived class.
 1. C++ public Inheritance
 In this example, public inheritance is demonstrated. Since private and protected members will not be directly accessed from main( ) 
 so we have had to create functions name getPVT( ) to access the private variable and getProt( ) to access the protected variable from the inherited class.
